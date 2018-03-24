@@ -1,0 +1,138 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://WorldEnvironment.tres" type="Environment" id=3]
+[ext_resource path="res://Scenes/Floor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Materials/MetalSurface.tres" type="Material" id=5]
+[ext_resource path="res://Scenes/Box.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Stairs.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Wall.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/LightBrick.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Light.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Lightsaber/Lightsaber.tscn" type="PackedScene" id=11]
+
+[node name="Main" type="Spatial" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 2 )]
+
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0.228554, 0.0332863, -1.7332 )
+left_hand_item = NodePath("../Lightsaber2")
+right_hand_item = NodePath("../Lightsaber")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
+
+environment = ExtResource( 3 )
+
+[node name="Sun" type="DirectionalLight" parent="." index="2"]
+
+transform = Transform( 0.999914, -0.00660969, -0.011313, 0.000826157, -0.829925, 0.557874, -0.0130769, -0.557836, -0.829848, -0.0160306, 9.37484, -0.00306559 )
+layers = 1
+light_color = Color( 0.933594, 0.975098, 1, 1 )
+light_energy = 10.0
+light_indirect_energy = 0.04
+light_negative = false
+light_specular = 1.0
+light_bake_mode = 2
+light_cull_mask = -1
+shadow_enabled = true
+shadow_color = Color( 0.114975, 0.158668, 0.214844, 1 )
+shadow_bias = 0.05
+shadow_contact = 0.06
+shadow_reverse_cull_face = false
+editor_only = false
+directional_shadow_mode = 0
+directional_shadow_split_1 = 0.1
+directional_shadow_split_2 = 0.2
+directional_shadow_split_3 = 0.5
+directional_shadow_blend_splits = false
+directional_shadow_normal_bias = 0.05
+directional_shadow_bias_split_scale = 0.0
+directional_shadow_depth_range = 1
+directional_shadow_max_distance = 50.0
+_sections_unfolded = [ "Directional Shadow", "Light" ]
+
+[node name="Floor" parent="." index="3" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+
+[node name="FloorMesh" parent="Floor" index="0"]
+
+material/0 = ExtResource( 5 )
+
+[node name="Box01" parent="." index="4" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+transform = Transform( 0.946554, 0, -0.322545, 0, 1, 0, 0.322545, 0, 0.946554, 3, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Box02" parent="." index="5" instance=ExtResource( 6 )]
+
+transform = Transform( 0.762114, 0, -0.647443, 0, 1, 0, 0.647443, 0, 0.762114, 0, 0, 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Box03" parent="." index="6" instance=ExtResource( 6 )]
+
+transform = Transform( 0.901652, 0, 0.432463, 0, 1, 0, -0.432463, 0, 0.901652, -3, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Box04" parent="." index="7" instance=ExtResource( 6 )]
+
+transform = Transform( 0.796021, 0, -0.605269, 0, 1, 0, 0.605269, 0, 0.796021, 0, 0, -3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Stairs" parent="." index="8" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
+
+[node name="Wall01" parent="." index="9" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall02" parent="." index="10" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall03" parent="." index="11" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall04" parent="." index="12" instance=ExtResource( 8 )]
+
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0, 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Wall05" parent="." index="13" instance=ExtResource( 8 )]
+
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 0, 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Light" parent="." index="14" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26597, 0.393785, 0.0531495 )
+light_cull_mask = -1
+
+[node name="Light2" parent="." index="15" instance=ExtResource( 10 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.720076, 0, 1.32139 )
+_sections_unfolded = [ "Light", "Omni", "Transform" ]
+
+[node name="Lightsaber2" parent="." index="16" instance=ExtResource( 11 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.986306, 0.607571, 1.95578e-07 )
+blade_color = Color( 0, 1, 0.742188, 1 )
+
+[node name="Lightsaber" parent="." index="17" instance=ExtResource( 11 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96046e-08, 0.536942, 2.63564e-07 )
+blade_color = Color( 1, 0.210938, 0, 1 )
+
+
+[editable path="Floor"]
+[editable path="Box01"]

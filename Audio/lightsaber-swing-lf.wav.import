@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/lightsaber-swing-lf.wav-2309c17bf904b86bc45ffca66fdad3b1.sample"
+
+[deps]
+
+source_file="res://Audio/lightsaber-swing-lf.wav"
+source_md5="637ef2c278cb4d9065e9034ae7e39ca9"
+
+dest_files=[ "res://.import/lightsaber-swing-lf.wav-2309c17bf904b86bc45ffca66fdad3b1.sample" ]
+dest_md5="7b7fbfbc9f6d2029f4c31e80e01a5dbb"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
