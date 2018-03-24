@@ -2,14 +2,14 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/lightsaber-ignite-lf.wav-21aee6306da41ccafc0df0b242aa3970.sample"
+path="res://.import/lightsaber-ignite-lucasfilm.wav-8ca796f8fe01887b595675c36a3711ee.sample"
 
 [deps]
 
-source_file="res://Audio/lightsaber-ignite-lf.wav"
+source_file="res://Audio/lightsaber-ignite-lucasfilm.wav"
 source_md5="8289fb023a2842c732fc3931dcaa71bd"
 
-dest_files=[ "res://.import/lightsaber-ignite-lf.wav-21aee6306da41ccafc0df0b242aa3970.sample" ]
+dest_files=[ "res://.import/lightsaber-ignite-lucasfilm.wav-8ca796f8fe01887b595675c36a3711ee.sample" ]
 dest_md5="8b94cf94200ce9572fe4f93788ea493f"
 
 [params]

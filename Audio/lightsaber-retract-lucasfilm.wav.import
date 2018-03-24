@@ -2,14 +2,14 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/lightsaber-retract-lf.wav-34a90170312b1783018db572c07a89c1.sample"
+path="res://.import/lightsaber-retract-lucasfilm.wav-4aeaa216e71512f46e63eac31433cc19.sample"
 
 [deps]
 
-source_file="res://Audio/lightsaber-retract-lf.wav"
+source_file="res://Audio/lightsaber-retract-lucasfilm.wav"
 source_md5="9875747451e39f257c14d6017a1d4a1e"
 
-dest_files=[ "res://.import/lightsaber-retract-lf.wav-34a90170312b1783018db572c07a89c1.sample" ]
+dest_files=[ "res://.import/lightsaber-retract-lucasfilm.wav-4aeaa216e71512f46e63eac31433cc19.sample" ]
 dest_md5="f0d49ec037cca6927b4a070a576b0ed2"
 
 [params]

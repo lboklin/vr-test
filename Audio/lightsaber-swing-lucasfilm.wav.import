@@ -2,14 +2,14 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/lightsaber-swing-lf.wav-2309c17bf904b86bc45ffca66fdad3b1.sample"
+path="res://.import/lightsaber-swing-lucasfilm.wav-0f44ffeda55984ccd6b1e3b16805b708.sample"
 
 [deps]
 
-source_file="res://Audio/lightsaber-swing-lf.wav"
+source_file="res://Audio/lightsaber-swing-lucasfilm.wav"
 source_md5="637ef2c278cb4d9065e9034ae7e39ca9"
 
-dest_files=[ "res://.import/lightsaber-swing-lf.wav-2309c17bf904b86bc45ffca66fdad3b1.sample" ]
+dest_files=[ "res://.import/lightsaber-swing-lucasfilm.wav-0f44ffeda55984ccd6b1e3b16805b708.sample" ]
 dest_md5="7b7fbfbc9f6d2029f4c31e80e01a5dbb"
 
 [params]

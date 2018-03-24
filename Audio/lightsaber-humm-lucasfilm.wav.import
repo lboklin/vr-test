@@ -2,14 +2,14 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/lightsaber-humm-lf.wav-918f2c5a56e3aac39a2d01e9594be3ce.sample"
+path="res://.import/lightsaber-humm-lucasfilm.wav-25c7453cfbb976dca19baee62dd14a55.sample"
 
 [deps]
 
-source_file="res://Audio/lightsaber-humm-lf.wav"
+source_file="res://Audio/lightsaber-humm-lucasfilm.wav"
 source_md5="9b23ddbf4249e9b3df0e3f4233e94aa6"
 
-dest_files=[ "res://.import/lightsaber-humm-lf.wav-918f2c5a56e3aac39a2d01e9594be3ce.sample" ]
+dest_files=[ "res://.import/lightsaber-humm-lucasfilm.wav-25c7453cfbb976dca19baee62dd14a55.sample" ]
 dest_md5="beb4a881e7fb2c2888c29704d2b72112"
 
 [params]
