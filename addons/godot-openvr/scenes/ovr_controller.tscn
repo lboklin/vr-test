@@ -2,12 +2,13 @@
 
 [ext_resource path="res://addons/godot-openvr/scenes/ovr_controller.gd" type="Script" id=1]
 
-[node name="OVRController" type="ARVRController" index="0"]
+[node name="OVRController" type="ARVRController"]
 
 controller_id = 1
 rumble = 0.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+pad_center_radius = 0.75
 
 [node name="Controller_mesh" type="MeshInstance" parent="." index="0"]
 
