@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://WorldEnvironment.tres" type="Environment" id=3]
+[ext_resource path="res://default_env.tres" type="Environment" id=3]
 [ext_resource path="res://Scenes/Floor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Materials/MetalSurface.tres" type="Material" id=5]
 [ext_resource path="res://Scenes/Box.tscn" type="PackedScene" id=6]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scenes/LightBrick.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Light.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Lightsaber/Lightsaber.tscn" type="PackedScene" id=11]
+
 
 [node name="Main" type="Spatial" index="0"]
 
