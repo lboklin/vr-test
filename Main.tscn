@@ -12,7 +12,6 @@
 [ext_resource path="res://Scenes/Light.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Lightsaber/Lightsaber.tscn" type="PackedScene" id=11]
 
-
 [node name="Main" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
@@ -23,6 +22,14 @@ _sections_unfolded = [ "Transform" ]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0.228554, 0.0332863, -1.7332 )
 left_hand_item = NodePath("../Lightsaber2")
 right_hand_item = NodePath("../Lightsaber")
+
+[node name="Function_Grab" parent="Player/Left_Hand" index="2"]
+
+equipped_item = NodePath("../../../Lightsaber2")
+
+[node name="Function_Grab" parent="Player/Right_Hand" index="2"]
+
+equipped_item = NodePath("../../../Lightsaber")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
 
@@ -122,6 +129,7 @@ light_cull_mask = -1
 [node name="Light2" parent="." index="15" instance=ExtResource( 10 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.720076, 0, 1.32139 )
+light_cull_mask = -1
 _sections_unfolded = [ "Light", "Omni", "Transform" ]
 
 [node name="Lightsaber2" parent="." index="16" instance=ExtResource( 11 )]
@@ -135,5 +143,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96046e-08, 0.536942, 2.6356
 blade_color = Color( 1, 0.210938, 0, 1 )
 
 
+[editable path="Player"]
 [editable path="Floor"]
 [editable path="Box01"]

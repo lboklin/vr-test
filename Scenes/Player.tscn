@@ -2,7 +2,8 @@
 
 [ext_resource path="res://Scenes/Player.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-openvr/scenes/ovr_controller.tscn" type="PackedScene" id=2]
-[ext_resource path="res://addons/vr-common/functions/Function_Teleport.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/vr-common/functions/Function_Teleport.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/vr-common/functions/Function_Grab.tscn" type="PackedScene" id=4]
 
 [node name="Player" type="ARVROrigin"]
 
@@ -32,15 +33,22 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="Left_Hand" parent="." index="1" instance=ExtResource( 2 )]
 
 controller_id = 2
+pad_center_radius = 0.75
 
-[node name="Function_Teleport" parent="Left_Hand" index="2" instance=ExtResource( 4 )]
+[node name="Function_Teleport" parent="Left_Hand" index="1" instance=ExtResource( 3 )]
 
 origin = NodePath("../..")
+
+[node name="Function_Grab" parent="Left_Hand" index="2" instance=ExtResource( 4 )]
 
 [node name="Right_Hand" parent="." index="2" instance=ExtResource( 2 )]
 
-[node name="Function_Teleport" parent="Right_Hand" index="2" instance=ExtResource( 4 )]
+pad_center_radius = 0.75
+
+[node name="Function_Teleport" parent="Right_Hand" index="1" instance=ExtResource( 3 )]
 
 origin = NodePath("../..")
+
+[node name="Function_Grab" parent="Right_Hand" index="2" instance=ExtResource( 4 )]
 
 
