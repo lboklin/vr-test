@@ -1,0 +1,3 @@
+[submodule "godot-openvr-asset"]
+	path = godot-openvr-asset
+	url = https://github.com/lboklin/godot-openvr-asset/
