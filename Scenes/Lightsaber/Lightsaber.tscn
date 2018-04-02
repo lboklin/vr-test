@@ -8,9 +8,6 @@
 [ext_resource path="res://Audio/lightsaber-ignite-lucasfilm.wav" type="AudioStream" id=6]
 [ext_resource path="res://Audio/lightsaber-retract-lucasfilm.wav" type="AudioStream" id=7]
 
-
-
-
 [sub_resource type="ArrayMesh" id=1]
 
 blend_shape_mode = 1
@@ -258,7 +255,7 @@ input_capture_on_drag = false
 collision_layer = 1
 collision_mask = 1
 mode = 0
-mass = 1.0
+mass = 0.4
 friction = 1.0
 bounce = 0.0
 gravity_scale = 1.0
@@ -279,7 +276,7 @@ linear_damp = -1.0
 angular_velocity = Vector3( 0, 0, 0 )
 angular_damp = -1.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Linear", "Transform" ]
 blade_color = Color( 0.5, 1, 0.7, 1 )
 
 [node name="Hilt" type="MeshInstance" parent="." index="0"]
@@ -321,7 +318,7 @@ blend_times = [  ]
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="2"]
 
-transform = Transform( 0.02, -2.13117e-19, -1.63721e-17, 1.21781e-20, 0.35, 8.35156e-35, 1.63721e-17, -1.63598e-33, 0.02, 0, -0.175, 0 )
+transform = Transform( 0.014, -9.13358e-20, -1.14605e-17, 8.52467e-21, 0.15, 5.84609e-35, 1.14605e-17, -7.01135e-34, 0.014, 0, -0.15, 0 )
 shape = SubResource( 4 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
@@ -329,6 +326,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Blade" type="MeshInstance" parent="." index="3"]
 
 transform = Transform( 0.012, 0, 0, 0, 0.499999, 0, 0, 0, 0.012, 6.1e-05, 0.5, -5.99999e-06 )
+visible = false
 layers = 1
 material_override = null
 cast_shadow = 0
@@ -489,8 +487,6 @@ mesh = SubResource( 9 )
 skeleton = NodePath("..")
 material/0 = null
 _sections_unfolded = [ "Transform", "material" ]
-
-[connection signal="body_entered" from="." to="." method="_on_Lightsaber_body_entered"]
 
 [connection signal="finished" from="Blade/AudioStream_Ignite" to="Blade" method="_on_AudioStream_Ignite_finished"]
 
