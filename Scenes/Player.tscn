@@ -5,7 +5,7 @@
 [ext_resource path="res://addons/vr-common/functions/Function_Teleport.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/vr-common/functions/Function_Grab.tscn" type="PackedScene" id=4]
 
-[node name="Player" type="ARVROrigin"]
+[node name="Player" type="ARVROrigin" index="0"]
 
 world_scale = 1.0
 script = ExtResource( 1 )
@@ -21,7 +21,7 @@ cull_mask = 1048575
 environment = null
 h_offset = 0.0
 v_offset = 0.0
-doppler_tracking = 0
+doppler_tracking = 2
 projection = 0
 current = false
 fov = 70.0
@@ -33,7 +33,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="Left_Hand" parent="." index="1" instance=ExtResource( 2 )]
 
 controller_id = 2
-pad_center_radius = 0.75
 
 [node name="Function_Teleport" parent="Left_Hand" index="1" instance=ExtResource( 3 )]
 
@@ -42,8 +41,6 @@ origin = NodePath("../..")
 [node name="Function_Grab" parent="Left_Hand" index="2" instance=ExtResource( 4 )]
 
 [node name="Right_Hand" parent="." index="2" instance=ExtResource( 2 )]
-
-pad_center_radius = 0.75
 
 [node name="Function_Teleport" parent="Right_Hand" index="1" instance=ExtResource( 3 )]
 

@@ -27,6 +27,10 @@ singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib", "res://godot-openv
 3d_physics/layer_1="World"
 3d_physics/layer_20="Player"
 
+[physics]
+
+common/physics_fps=90
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
