@@ -24,6 +24,7 @@ var tip_pos_delta = 0
 var humming = false setget humm,is_humming
 
 func _ready():
+	self.length = 0
 	set_blade_mat(create_blade_mat())
 	set_physics_process(true)
 
