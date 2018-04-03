@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Character/Character.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Character/Head.tscn" type="PackedScene" id=2]
+
+[node name="Character" type="Spatial" index="0"]
+
+script = ExtResource( 1 )
+player = null
+
+[node name="Head" parent="." index="0" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0 )
+
+
