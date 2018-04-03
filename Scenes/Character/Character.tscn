@@ -3,7 +3,7 @@
 [ext_resource path="res://Scenes/Character/Character.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Character/Head.tscn" type="PackedScene" id=2]
 
-[node name="Character" type="Spatial" index="0"]
+[node name="Character" type="Spatial"]
 
 script = ExtResource( 1 )
 player = null

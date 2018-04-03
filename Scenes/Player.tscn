@@ -11,6 +11,10 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 character = null
 camera_distance = 2.0
+camera_vert_offset = 0.3
+camera_lock_vert = true
+camera_speed = 2
+camera_smooth = true
 
 [node name="ARVRCamera" type="ARVRCamera" parent="." index="0"]
 
@@ -36,5 +40,7 @@ controller_id = 2
 [node name="Function_WorldScale" parent="Left_Hand" index="1" instance=ExtResource( 3 )]
 
 [node name="Right_Hand" parent="." index="2" instance=ExtResource( 2 )]
+
+[node name="Function_WorldScale" parent="Right_Hand" index="1" instance=ExtResource( 3 )]
 
 

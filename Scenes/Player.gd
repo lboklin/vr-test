@@ -5,6 +5,10 @@ extends ARVROrigin
 
 export (NodePath) var character = null
 export var camera_distance = 2.0
+export var camera_vert_offset = 0.3
+export var camera_lock_vert = true
+export var camera_speed = 2 # meters per second
+export var camera_smooth = true
 
 
 func _ready():
@@ -21,22 +25,30 @@ func _process(delta):
 
 	var head = get_node(character).find_node("Head")
 	var head_pos = head.global_transform.origin
-	var head_back = head.global_transform.basis.z
+	var head_back = head.global_transform.basis.z.normalized()
 
 	var hmd = $ARVRCamera
-	var hmd_pos = hmd.global_transform.origin
-
+	var hmd_pos = hmd.global_transform.origin #/ world_scale
 	var hmd_back = hmd.global_transform.basis.z.normalized()
-	var cam_offset = Vector3(0, 0.5, 0) + hmd_back * camera_distance / self.world_scale
+
+	var v_offset = Vector3(0, head_pos.y + camera_vert_offset, 0)
+	var h_offset = (hmd_back * Vector3(1,0,1)).normalized()
+	var cam_offset = camera_distance * h_offset + v_offset #/ self.world_scale
 	var tgt_camera_pos = head_pos + cam_offset # Behind head
 
-	var pos_step = hmd_pos.linear_interpolate(tgt_camera_pos, delta * 2)
-
-	# reset our player position to center
-#	ARVRServer.center_on_hmd(true, true)
 	var orig_to_hmd = hmd_pos - self.global_transform.origin
-	# Reposition the player's POV towards behind the character
-	self.global_transform.origin = pos_step - orig_to_hmd
+
+	# Move camera
+	var next_pos
+	if !camera_smooth:
+		next_pos = tgt_camera_pos
+	else:
+		var hmd_to_tgt = tgt_camera_pos - hmd_pos
+		var dir = hmd_to_tgt.normalized()
+		var dist = hmd_to_tgt.length()
+		next_pos = hmd_pos + dir * min(dist, camera_speed * delta)
+	var new_pos = next_pos - orig_to_hmd
+	self.global_transform.origin = new_pos
 
 func platform_movement(delta):
 	var hmd = $ARVRCamera
