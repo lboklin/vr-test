@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Player.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-openvr/scenes/ovr_controller.tscn" type="PackedScene" id=2]
 [ext_resource path="res://addons/vr-common/functions/Function_WorldScale.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/HoverPlatform.tscn" type="PackedScene" id=4]
 
 [node name="Player" type="ARVROrigin" index="0"]
 
@@ -10,11 +11,11 @@ world_scale = 2.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 character = null
-camera_distance = 2.0
-camera_vert_offset = 0.3
-camera_lock_vert = true
-camera_speed = 2
-camera_smooth = true
+camera_follow_distance = 2.0
+camera_follow_vert_offset = 0.3
+camera_follow_speed = 2
+camera_follow_smooth = true
+camera_mode = 0
 
 [node name="ARVRCamera" type="ARVRCamera" parent="." index="0"]
 
@@ -42,5 +43,7 @@ controller_id = 2
 [node name="Right_Hand" parent="." index="2" instance=ExtResource( 2 )]
 
 [node name="Function_WorldScale" parent="Right_Hand" index="1" instance=ExtResource( 3 )]
+
+[node name="HoverPlatform" parent="." index="3" instance=ExtResource( 4 )]
 
 
