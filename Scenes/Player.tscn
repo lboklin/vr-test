@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Player.gd" type="Script" id=1]
-[ext_resource path="res://addons/godot-openvr/scenes/ovr_controller.tscn" type="PackedScene" id=2]
-[ext_resource path="res://addons/vr-common/functions/Function_WorldScale.tscn" type="PackedScene" id=3]
+[ext_resource path="res://godot-openvr-asset/addons/godot-openvr/scenes/ovr_controller.tscn" type="PackedScene" id=2]
+[ext_resource path="res://godot-openvr-asset/addons/vr-common/functions/Function_WorldScale.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/HoverPlatform.tscn" type="PackedScene" id=4]
 
 [node name="Player" type="ARVROrigin" index="0"]

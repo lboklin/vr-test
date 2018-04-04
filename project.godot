@@ -20,7 +20,7 @@ window/vsync/use_vsync=false
 
 [gdnative]
 
-singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib", "res://godot-openvr-asset/addons/godot-openvr/godot_openvr.gdnlib" ]
+singletons=[ "res://godot-openvr-asset/addons/godot-openvr/godot_openvr.gdnlib" ]
 
 [layer_names]
 
